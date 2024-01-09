@@ -1,0 +1,13 @@
+<!-- tickets/templates/tickets/book_flight.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Book Flight</h2>
+  <p>{{ flight.flight_number }} - {{ flight.departure_city }} to {{ flight.destination_city }} -
+    {{ flight.departure_time|date:"DATETIME_FORMAT" }} -
+    ${{ flight.price }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Book Now">
+  </form>
+{% endblock %}

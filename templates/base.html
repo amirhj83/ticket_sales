@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فروش بلیت هواپیما</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> فروش بلیت هواپیما</h1>
+    </header>
+
+    <main>
+        <form>
+            <label for="destination"> شهر مقصد</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="destination"> شهر مبدا</label>
+            <input type="text" id="destination" name="destination" required>
+
+            <label for="departureDate">تاریخ رفت:</label>
+            <input type="date" id="departureDate" name="departureDate" required>
+
+            <label for="returnDate">تاریخ برگشت:</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+
+            <label for="passengerCount">تعداد مسافران:</label>
+            <input type="number" id="passengerCount" name="passengerCount" min="1" required>
+
+            <button type="submit">خرید بلیت</button>
+        </form>
+    </main>
+</body>
+
+</html>

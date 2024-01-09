@@ -1,0 +1,16 @@
+<!-- tickets/templates/tickets/flight_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Flight List</h2>
+  <ul>
+    {% for flight in flights %}
+      <li>
+        {{ flight.flight_number }} - {{ flight.departure_city }} to {{ flight.destination_city }} -
+        {{ flight.departure_time|date:"DATETIME_FORMAT" }} -
+        ${{ flight.price }}
+        (<a href="{% url 'book_flight' flight.id %}">Book Now</a>)
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
